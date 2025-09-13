@@ -1,2 +1,27 @@
 # Python_Tasks
-Python_Tasks is a collection of coding exercises, challenges, and small projects created to strengthen Python skills and problem-solving abilities. The repository covers a wide range of topics, from beginner-level basics to more advanced algorithms, serving as both a learning journey and a resource for others.
+
+This repository contains small Python projects and practice tasks.  
+Currently, it includes:
+
+## 1. Rock–Paper–Scissors Game 🎮
+A simple two-player game where users choose between **rock**, **paper**, or **scissors**.  
+The program compares the choices and decides the winner based on the rules:
+
+- Rock beats Scissors  
+- Scissors beats Paper  
+- Paper beats Rock  
+
+👉 *Great for practicing conditionals, loops, and user input handling.*
+
+---
+
+## 2. ATM System 💳
+A console-based ATM simulation where users can:
+
+- Log in with a PIN  
+- Check account balance  
+- Deposit money  
+- Withdraw money  
+- Exit the system  
+
+👉 *Helps to understand functions, loops, and basic data handling in Python.*
