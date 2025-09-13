@@ -1,0 +1,63 @@
+users={}
+while True:
+    print("Register to your account!. ")
+    while True:
+        username = input("Enter your name (register): ").strip().lower()
+        if username == "":
+            print("Username cannot be empty")
+        else:
+            break
+        
+    
+    while True:
+        password = input("Enter your password (register): ").strip().lower()
+        if len(password) < 4:
+            print("Short password")
+        else:
+            break
+    users[username] = [password, 0]
+    
+    while True:
+        print("\nLogin to your account!. ")
+        username_check = input("Enter your username: ").strip().lower()
+        password_check = input("Enter your password: ").strip().lower()
+    
+        if not (username_check in users and password_check == users[username_check][0]):
+            print("\nAccess denied. Invalid username or password.")
+            continue
+        print("\nAccess granted")
+    
+        balance = users[username][1]
+        while True:
+            print(f"\nbalance:{balance}")
+            option = input("You would like to withdraw, deposit or exit bank account: ")
+            
+            if option == "deposit":
+                deposit = int(input("How much money would you like to deposit: "))
+                if deposit < 0:
+                    print("Deposit can not be negative")
+                    continue
+                balance += deposit
+                
+            elif option == "withdraw":
+                withdraw = int(input("How much money would you like to withdraw: "))
+                if withdraw > balance:
+                    print("Withdraw can not be more than balance")
+                    continue
+                elif withdraw < 0:
+                    print("Withdraw can not be negative")
+                    continue
+                balance -= withdraw
+    
+            elif option == "exit":
+                users[username][1] = balance
+                break
+            else:
+                print("There is no any option like that")
+        option = input("Shut down, login or register? ").lower()
+        if option == "register":
+            break
+        elif option == "login":
+            continue
+        else:
+            break
