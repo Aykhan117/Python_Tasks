@@ -15,7 +15,7 @@ while True:
             print("Short password")
         else:
             break
-    users[username] = [password, 0]
+    users[username_check] = [password, 0]
     
     while True:
         print("\nLogin to your account!. ")
