@@ -1,0 +1,45 @@
+while True:
+    player_1 = input('Choose one of them (rock, paper, scissors): ')
+    player_2 = input('Choose one of them (rock, paper, scissors): ')
+    
+    if player_1 not in ['rock', 'paper', 'scissors']:
+        print(f'{player_1} is not one of them')
+        
+        while True:
+            player_1 = input('Choose one of them (rock, paper, scissors): ')
+            if player_1 in ['rock', 'paper', 'scissors']:
+                break
+            print('This is wrong')
+            
+        
+    if player_2 not in ['rock', 'paper', 'scissors']:
+        print(f'{player_2} is not one of them')
+        
+        while True:
+            player_2 = input('Choose one of them (rock, paper, scissors): ')
+            if player_2 in ['rock', 'paper', 'scissors']:
+                break
+            print('This is wrong')
+            
+        
+    if player_1 == 'rock' and player_2 == 'scissors':
+        print(f'{player_1} won')
+    elif player_1 == 'rock' and player_2 == 'paper':
+        print(f'{player_2} won')
+    elif player_1 == 'paper' and player_2 == 'scissors':
+        print(f'{player_2} won')
+    elif player_1 == 'paper' and player_2 == 'rock':
+        print(f'{player_1} won')
+    elif player_1 == 'scissors' and player_2 == 'paper':
+        print(f'{player_1} won')
+    elif player_1 == 'scissors' and player_2 == 'rock':
+        print(f'{player_2}')
+    else:
+        print('It is a tie')
+        
+    question = input('Do you want to continue (yes, no): ')
+    if question == 'yes':
+        continue
+    else:
+        break
+print('Thank you for playing')
