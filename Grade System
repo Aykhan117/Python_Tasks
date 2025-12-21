@@ -1,0 +1,83 @@
+def add_grade(_grades):
+    while True:
+        number = int(input("Enter a number between 0 and 100: "))
+        if number < 0 or number > 100:
+            print("Please enter a valid number")
+        else:
+            _grades.append(number)
+            return _grades
+
+def remove_last_grade(_grades):
+    if not _grades:
+        print("There are no any grades")
+    else:
+        _grades.pop()
+    return _grades
+
+def calculate_average(_grades):
+    if _grades:
+        average = sum(_grades) / len(_grades)
+        print(average)
+    else:
+        print("No grades available.")
+
+def find_highest_grade(_grades):
+    print(max(_grades))
+
+def find_lowest_grade(_grades):
+    print(min(_grades))
+
+def check_fail_grade(_grades):
+    for grade in _grades:
+        if grade < 50:
+            print("Fail")
+        else:
+            print("Pass")
+
+def reset(_grades):
+    _grades.clear()
+    return _grades
+
+def show_menu():
+    grades = []
+
+    while True:
+        choice = input(
+        '''
+Which option you want to choose( 
+    
+    1 - add a grade
+    2 - remove last grade 
+    3 - calculate average 
+    4 - find highest grade 
+    5 - find lowest grade 
+    6 - check 
+    7 - Reset
+    8 - exit ): ''')
+
+        if choice == "1" or choice == "Add a grade":
+            grades = add_grade(grades)
+
+        elif choice == "2" or choice == "Remove last grade":
+            grades = remove_last_grade(grades)
+
+        elif choice == "3" or choice == "Calculate average":
+            calculate_average(grades)
+
+        elif choice == "4" or choice == "Find highest grade":
+            find_highest_grade(grades)
+
+        elif choice == "5" or choice == "Find lowest grade":
+            find_lowest_grade(grades)
+
+        elif choice == "6" or choice == "Check":
+            check_fail_grade(grades)
+
+        elif choice == "7" or choice == "Reset":
+            reset(grades)
+
+        elif choice == "8" or choice == "Exit":
+            print("Good Bye!")
+            break
+
+show_menu()
