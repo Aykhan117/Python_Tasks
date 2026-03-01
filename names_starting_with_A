@@ -1,0 +1,5 @@
+# Choosing names from the list that starts with letter "A"
+names = ["Aykhan", "Shamil", "Ismayil"]
+for name in names:
+    if name[0] == "A":
+        print(name)
